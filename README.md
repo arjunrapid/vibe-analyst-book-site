@@ -31,4 +31,8 @@ Import this repository in Vercel and use:
 
 ## Amazon link
 
-Update `AMAZON_URL` in `src/main.jsx` when the live Amazon/KDP listing is available.
+The live Amazon/KDP listing is configured in `src/main.jsx`:
+
+```text
+https://www.amazon.com/dp/B0H2D2QSWY
+```

@@ -34,9 +34,9 @@ const audiences = [
 
 const faqs = [
   {
-    question: "When will the book be available?",
+    question: "Where can I buy the book?",
     answer:
-      "The Kindle eBook is currently in review. The purchase link will be added here as soon as the Amazon listing is live."
+      "The Kindle eBook is available now on Amazon. Use the Buy on Amazon button to open the live book page."
   },
   {
     question: "Do I need to know how to code?",
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "Will paperback and hardcover editions be available?",
     answer:
-      "Paperback and hardcover formats are planned after the Kindle launch. This site will be updated as those formats become available."
+      "Paperback and hardcover formats are planned as future editions. This site will be updated as those formats become available."
   },
   {
     question: "Who should read this?",
@@ -56,8 +56,8 @@ const faqs = [
 ];
 
 function App() {
-  const ctaHref = AMAZON_URL || "#availability";
-  const ctaLabel = AMAZON_URL ? "Buy on Amazon" : "Coming soon on Amazon";
+  const ctaHref = AMAZON_URL;
+  const ctaLabel = "Buy on Amazon";
 
   return (
     <main>
@@ -76,7 +76,7 @@ function App() {
       <section className="hero" id="top">
         <div className="network-bg" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow">Kindle eBook in review</p>
+          <p className="eyebrow">Kindle eBook available now</p>
           <h1>Vibe Analyst</h1>
           <p className="subtitle">
             How Non-Technical Professionals Use AI Agents to Double Their Output
@@ -86,7 +86,7 @@ function App() {
             research, reporting, strategy, and high-leverage business work.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href={ctaHref} aria-disabled={!AMAZON_URL}>
+            <a className="primary-button" href={ctaHref}>
               {ctaLabel}
             </a>
             <a className="secondary-button" href="#learn">
@@ -106,7 +106,7 @@ function App() {
           </div>
           <div className="status-card">
             <span className="pulse" aria-hidden="true" />
-            Amazon Kindle launch page will be linked here after review.
+            Now live on Amazon for Kindle readers.
           </div>
         </div>
       </section>
@@ -162,12 +162,12 @@ function App() {
           <article className="detail-panel active-format">
             <span className="format-label">Kindle eBook</span>
             <h3>$11.00 USD</h3>
-            <p>Currently in review on Amazon KDP. Purchase link coming soon.</p>
+            <p>Available now on Amazon. Open the live listing to buy the Kindle edition.</p>
           </article>
           <article className="detail-panel">
             <span className="format-label">Paperback</span>
             <h3>Planned</h3>
-            <p>Print edition will follow after the Kindle launch is complete.</p>
+            <p>Print edition is planned as a future format expansion.</p>
           </article>
           <article className="detail-panel">
             <span className="format-label">Hardcover</span>
@@ -194,7 +194,7 @@ function App() {
       <section className="faq">
         <div className="section-heading">
           <p className="section-kicker">FAQ</p>
-          <h2>Before launch</h2>
+          <h2>Now available</h2>
         </div>
         <div className="faq-list">
           {faqs.map((item) => (
